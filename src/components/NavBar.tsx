@@ -10,6 +10,7 @@ function NavBar() {
           
         </Navbar.Brand>
         <Form inline>
+          <h2 className="heart-color font-weight-bold ">Hearts </h2>
           <Button className="ml-3" variant="outline-success">
             New Game
           </Button>
