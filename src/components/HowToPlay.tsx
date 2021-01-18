@@ -7,7 +7,7 @@ const HowToPlay = () => {
 
   return (
     <>
-      <Button className="HowToPlay" variant="secondary" onClick={() => setShow(true)}>
+      <Button variant="secondary" className="mr-2" onClick={() => setShow(true)}>
         How To Play
       </Button>
       <Modal show={show} onHide={handleClose} backdrop="static" keyboard={false}>
