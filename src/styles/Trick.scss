@@ -1,0 +1,34 @@
+.trick {
+  position: relative;
+  margin: auto;
+  height: 12em;
+  width: 12em;
+}
+
+.trick .card {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.trick .card--north {
+  top: -2.5em;
+}
+
+.trick .card--east {
+  right: -2.5em;
+}
+
+.trick .card--south {
+  bottom: -2.5em;
+}
+
+.trick .card--west {
+  left: -2.5em;
+}

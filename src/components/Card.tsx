@@ -5,9 +5,9 @@ import { constants as heartsConstants } from "../common/heartRules";
 interface ICardProps {
   card: ICardInfo;
   direction?: string;
-  overturned: boolean;
-  toggled: boolean;
-  onClickHandler: () => void;
+  overturned?: boolean;
+  toggled?: boolean;
+  onClickHandler?: () => void;
 }
 
 const CardValue = ({ value }: ICardValueProps) => <div className="card__value">{value}</div>;
