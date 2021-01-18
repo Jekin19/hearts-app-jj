@@ -20,6 +20,10 @@ code {
   color: red;
 }
 
+.background-color {
+  background-color: #212121;
+}
+
 @import "~bootstrap/scss/bootstrap";
 @import "./HeartsGames.scss";
 @import "./Card.scss";
