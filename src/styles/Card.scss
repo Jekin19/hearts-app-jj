@@ -1,0 +1,31 @@
+.hand {
+  text-align: center;
+}
+
+.hand .card:hover {
+  transition: 0.1s;
+}
+
+.card {
+  font-size: 2em;
+  font-family: monospace;
+  cursor: default;
+  text-align: center;
+  display: inline-block;
+  width: 1.8em;
+  height: 2.929em;
+  border: 1px solid black;
+  border-radius: 5px 10px;
+  background: white;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
+}
+
+// Represents overturned card color
+.card--overturned {
+  background-color: #d50000;
+}
+
+// Represent card color to be exchanged
+.card--toggled {
+  background: rgb(235, 235, 235);
+}

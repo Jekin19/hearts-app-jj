@@ -16,9 +16,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
-.heart-color{
-  color: red
+.heart-color {
+  color: red;
 }
 
 @import "~bootstrap/scss/bootstrap";
 @import "./HeartsGames.scss";
+@import "./Card.scss";
+@import "./Player.scss";
