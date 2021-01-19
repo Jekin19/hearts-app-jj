@@ -8,6 +8,7 @@ const HowToPlay = () => {
   return (
     <>
       <Button variant="secondary" className="mr-2" onClick={() => setShow(true)}>
+        {/* <img src="./question.ico" width="30" height="30" alt=""></img> */}
         How To Play
       </Button>
       <Modal show={show} onHide={handleClose} backdrop="static" keyboard={false}>
