@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button, Modal } from "react-bootstrap";
 
-const HowToPlay = () => {
+const Rules = () => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
 
@@ -9,15 +9,15 @@ const HowToPlay = () => {
     <>
       <Button variant="secondary" className="mr-2" onClick={() => setShow(true)}>
         {/* <img src="./question.ico" width="30" height="30" alt=""></img> */}
-        How To Play
+        Rules
       </Button>
       <Modal show={show} onHide={handleClose} backdrop="static" keyboard={false}>
-        <Modal.Header className="bg-dark p-2">
-          <Modal.Title className="text-light w-100 text-center">How To Play</Modal.Title>
+        <Modal.Header className="bg-dark p-2" closeButton>
+          <Modal.Title className="text-light w-100 text-center">Rules</Modal.Title>
         </Modal.Header>
         <Modal.Body className="background-color text-light">
           <h5>
-            <u>Rules</u>
+            <u>How To Play</u>
           </h5>
           1) Player with the 2 of Clubs always makes the first lead starting with that card
           <br />
@@ -41,14 +41,10 @@ const HowToPlay = () => {
           all other players receive 26 points
           <br />
         </Modal.Body>
-        <Modal.Footer className="background-color bt-0 p-0">
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-        </Modal.Footer>
+        <Modal.Footer className="background-color bt-0 p-0"></Modal.Footer>
       </Modal>
     </>
   );
 };
 
-export default HowToPlay;
+export default Rules;
