@@ -12,7 +12,7 @@
   cursor: default;
   text-align: center;
   display: inline-block;
-  width: 1.8em;
+  // width: 1.8em;
   height: 2.929em;
   border: 1px solid black;
   border-radius: 5px 10px;
@@ -22,7 +22,12 @@
 
 // Represents overturned card color
 .card--overturned {
-  background-color: #d50000;
+  background-color: transparent;
+  background-image: url('../images/card_hand.svg');
+  background-size: 100% 100%;
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  -o-background-size: 100% 100%;
 }
 
 // Represent card color to be exchanged

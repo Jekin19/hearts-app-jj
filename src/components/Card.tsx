@@ -1,6 +1,6 @@
-import React from "react";
-import { ICardInfo, ICardSymbolProps, ICardValueProps } from "../common/heartRules";
-import { constants as heartsConstants } from "../common/heartRules";
+import React from 'react';
+import { ICardInfo, ICardSymbolProps, ICardValueProps } from '../common/heartRules';
+import { constants as heartsConstants } from '../common/heartRules';
 
 interface ICardProps {
   card: ICardInfo;
@@ -17,16 +17,16 @@ const CardSymbol = ({ symbol }: ICardSymbolProps) => <div className="card__symbo
 const Card = ({ card, onClickHandler, direction, overturned = false, toggled = false }: ICardProps) => {
   const { value, suit } = card;
   const className =
-    "card" +
-    (direction !== undefined ? " card--" + direction : "") +
-    (toggled ? " card--toggled" : "") +
-    (overturned ? " card--overturned" : "");
+    'card card-width' +
+    (direction !== undefined ? ' card--' + direction : '') +
+    (toggled ? ' card--toggled' : '') +
+    (overturned ? ' card--overturned' : '');
 
   const contents = overturned
     ? []
     : [
         <CardValue key="value" value={value} />,
-        <CardSymbol key="symbol" symbol={heartsConstants.cardSuits[suit].symbol} />,
+        <CardSymbol key="symbol" symbol={heartsConstants.cardSuits[suit].symbol} />
       ];
 
   return (

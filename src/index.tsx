@@ -1,10 +1,18 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import { Provider } from "react-redux";
-import "./styles/index.scss";
-import App from "./App";
-import reportWebVitals from "./reportWebVitals";
-import configureStore from "./redux/store";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
+import configureStore from './redux/store';
+import { isMobile } from 'react-device-detect';
+
+function setClassName() {
+  const element = document.getElementById('root_html');
+  if (isMobile && element && element.className) {
+    element.className = 'mobile';
+  }
+}
+setClassName();
 
 const store = configureStore();
 ReactDOM.render(
@@ -13,7 +21,7 @@ ReactDOM.render(
       <App />
     </Provider>
   </React.StrictMode>,
-  document.getElementById("root")
+  document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function
