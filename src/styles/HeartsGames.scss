@@ -1,8 +1,9 @@
 .content {
-  background-color: #212121;
-  // background-image: url("../images/card_hand.svg");
-  background-size: 100%;
+  background-image: url("../images/poker_table.jpg");
   background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  min-height: 100vh;
   overflow-x: hidden;
   overflow-y: hidden;
 }

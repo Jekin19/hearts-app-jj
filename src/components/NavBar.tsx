@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, Form, Navbar } from 'react-bootstrap';
-import HowToPlay from './HowToPlay';
+import Rules from './Rules';
+import Scores from './Scores';
 
 function NavBar() {
   return (
@@ -14,9 +15,10 @@ function NavBar() {
           <Button className="ml-3 button-size" variant="outline-success">
             New Game
           </Button>
+          <Scores />
         </Form>
         <Form inline>
-          <HowToPlay />
+          <Rules />
         </Form>
       </Navbar>
     </>

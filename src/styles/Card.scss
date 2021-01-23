@@ -22,12 +22,13 @@
 
 // Represents overturned card color
 .card--overturned {
-  background-color: transparent;
-  background-image: url('../images/card_hand.svg');
-  background-size: 100% 100%;
-  -webkit-background-size: 100% 100%;
-  -moz-background-size: 100% 100%;
-  -o-background-size: 100% 100%;
+  // background-color: transparent;
+  // background-image: url('../images/card_hand.svg');
+  // background-size: 100% 100%;
+  // -webkit-background-size: 100% 100%;
+  // -moz-background-size: 100% 100%;
+  // -o-background-size: 100% 100%;
+  background-color: #d50000;
 }
 
 // Represent card color to be exchanged
