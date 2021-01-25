@@ -3,10 +3,17 @@ import { store } from "../redux/storeData";
 import Player from "./Player";
 import { Trick } from "./Trick";
 
-export const HeartsGame: React.FC = () => {
+interface IHeartsGameProps {
+  navBarHeight?: number;
+}
+
+export const HeartsGame = ({ navBarHeight }: IHeartsGameProps) => {
   const playerName = store.players[0].name;
+  const getHeight = () => {
+    return `calc(100% - ${navBarHeight}px)`;
+  };
   return (
-    <div className="content d-flex flex-column w-100" style={{ height: "calc(100% - 54px)" }}>
+    <div className="content d-flex flex-column w-100" style={{ minHeight: getHeight() }}>
       <Player playerDirection="north" playerName={playerName} cardsHidden />
       <div className="flex-grow-1 row-flex">
         <Player playerDirection="west" playerName={playerName} cardsHidden />
