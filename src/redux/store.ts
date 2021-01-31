@@ -1,17 +1,23 @@
-import { applyMiddleware, combineReducers, createStore } from "redux";
-import thunkMiddleware from "redux-thunk";
-import logger from "redux-logger";
-import { composeWithDevTools } from "redux-devtools-extension";
+import { applyMiddleware, combineReducers, createStore } from 'redux';
+import thunkMiddleware from 'redux-thunk';
+import logger from 'redux-logger';
+import { composeWithDevTools } from 'redux-devtools-extension';
+import { initialState } from './reducers';
+import heartsPhase from './reducers/heartPhases';
+import heartsPlayers from './reducers/heartsPlayers';
+import { Hearts } from '../common/types/hearts';
 
-export default function configureStore(preloadedState = { initial: "initial" }) {
+export default function configureStore(preloadedState = initialState) {
   const middleWares = [logger, thunkMiddleware];
   const middlewareEnhancer = applyMiddleware(...middleWares);
   const enhancers = [middlewareEnhancer];
   const composedEnhancers = composeWithDevTools(...enhancers);
   const rootReducer = combineReducers({
-    initial: (state, action) => state ?? { initial: "initial" },
+    players: heartsPlayers,
+    phase: heartsPhase,
+    rounds: (state: Hearts.State, action) => []
   });
 
-  const store = createStore(rootReducer, preloadedState, composedEnhancers);
+  const store = createStore(rootReducer, {}, composedEnhancers);
   return store;
 }

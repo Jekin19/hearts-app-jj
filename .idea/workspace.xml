@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="cdfa4007-d680-4b20-9b2d-9e9791fd8e18" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/heartRules.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/heartRules.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HeartsGames.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HeartsGames.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Player.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Player.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PlayerHand.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PlayerHand.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/reducers/IPlayerInfo.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/IPlayerInfo.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/storeData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/storeData.ts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1nolrKnvXJcwI7jZFfwlXPttSRg" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cdfa4007-d680-4b20-9b2d-9e9791fd8e18" name="Default Changelist" comment="" />
+      <created>1612064522201</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1612064522201</updated>
+      <workItem from="1612064526353" duration="391000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2545" y="258" width="670" height="676" key="search.everywhere.popup" timestamp="1612064793281">
+      <screen x="1920" y="23" width="1920" height="1057" />
+    </state>
+    <state x="2545" y="258" width="670" height="676" key="search.everywhere.popup/0.23.1920.1057/3840.23.1080.1897/1920.23.1920.1057@1920.23.1920.1057" timestamp="1612064793281" />
+  </component>
+</project>
