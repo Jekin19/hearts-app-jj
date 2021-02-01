@@ -5,7 +5,8 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import { initialState } from './reducers';
 import heartsPhase from './reducers/heartPhases';
 import heartsPlayers from './reducers/heartsPlayers';
-import { Hearts } from '../common/types/hearts';
+import { heartsRounds } from './reducers/heartsRounds';
+import heartsUI from './reducers/heartsUI';
 
 export default function configureStore(preloadedState = initialState) {
   const middleWares = [logger, thunkMiddleware];
@@ -15,7 +16,8 @@ export default function configureStore(preloadedState = initialState) {
   const rootReducer = combineReducers({
     players: heartsPlayers,
     phase: heartsPhase,
-    rounds: (state: Hearts.State, action) => []
+    rounds: heartsRounds,
+    ui: heartsUI
   });
 
   const store = createStore(rootReducer, {}, composedEnhancers);

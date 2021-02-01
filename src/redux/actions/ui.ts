@@ -4,3 +4,5 @@ export const setPOV = (playerID: string) => ({
   type: SET_PLAYER_POV,
   playerID
 });
+
+export type UIActionTypes = ReturnType<typeof setPOV>;

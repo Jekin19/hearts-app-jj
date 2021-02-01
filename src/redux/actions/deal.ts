@@ -29,7 +29,7 @@ export const deal = () => {
       dispatch(dealCard(players[d % players.length].id, randomPop(deck)));
     }
 
-    return Promise.resolve('Finished Dealing');
+    // return Promise.resolve('Finished Dealing');
   };
 };
 
@@ -51,6 +51,6 @@ export const computerSelections = () => {
         dispatch(computerSelectPassCard(aiPlayers[p].id));
       }
     }
-    return Promise.resolve('Done Selections');
+    // return Promise.resolve('Done Selections');
   };
 };

@@ -8,5 +8,6 @@ declare namespace Hearts {
     players: Array<IPlayerInfo>;
     phase: GAME_PHASES;
     rounds: Array<Round.State>;
+    ui: UI.State;
   }
 }
