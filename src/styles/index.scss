@@ -27,6 +27,11 @@ body,
   color: red;
 }
 
+.sick-days-warning {
+  background-color: green !important;
+  font-weight: bold !important;
+}
+
 // Styles to be imported only for web
 html.web {
   @import './web-overrides.scss';

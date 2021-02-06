@@ -30,7 +30,7 @@ import { addPlayer, passCards, playCard, toggleCard } from './players';
 import { setPOV } from './ui';
 import { AIplayRandomCard as aiPlayChoice } from '../../ai/random';
 import { newTrick } from './tricks';
-import { newRound } from './round';
+import { newGame, newRound } from './round';
 
 export const addPlayerToState = (playerName: string, playerType: string = 'Human', POV = false) => (
   dispatch: Dispatch,
@@ -143,6 +143,13 @@ export const gameTick = () => {
           break;
         }
     }
+  };
+};
+
+export const onNewGame = () => {
+  return (dispatch: any, getState: () => Hearts.State) => {
+    dispatch(newGame());
+    dispatch(gameTick());
   };
 };
 

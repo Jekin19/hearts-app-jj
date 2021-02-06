@@ -12,6 +12,7 @@ import {
   toggleCard,
   TOGGLE_CARD
 } from '../actions/players';
+import { NEW_GAME } from '../actions/round';
 import { IPlayerInfo } from './IPlayerInfo';
 
 export const HEART_PLAYER_NAMES = {
@@ -176,6 +177,13 @@ const getPlayerStateOnPassCards = (state: IPlayerInfo, action: ReturnType<typeof
   return state;
 };
 
+const getPlayerStateOnNewGame = (state: IPlayerInfo) => {
+  return Object.assign({}, state, {
+    playerHand: [],
+    selectedCards: []
+  });
+};
+
 const getPlayerStateOnPlayCard = (state: IPlayerInfo, action: ReturnType<typeof playCard>) => {
   if (state.id !== action.playerID) {
     return state;
@@ -200,6 +208,8 @@ const heartsPlayers = (state = [], action: PlayerActions) => {
       return state.map((player) => getPlayerStateOnPassCards(player, action as ReturnType<typeof passCards>));
     case PLAY_CARD:
       return state.map((player) => getPlayerStateOnPlayCard(player, action as ReturnType<typeof playCard>));
+    case NEW_GAME:
+      return state.map((player) => getPlayerStateOnNewGame(player));
     default:
       return state;
   }
