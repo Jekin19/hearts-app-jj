@@ -1,23 +1,23 @@
-import React from 'react';
-import { Button, Form, Navbar } from 'react-bootstrap';
-import { useDispatch } from 'react-redux';
-import { onNewGame } from '../redux/actions';
-import Rules from './Rules';
-import Scores from './Scores';
+import React from "react";
+import { Form, Navbar } from "react-bootstrap";
+import { useDispatch } from "react-redux";
+import { getNavBarClassName } from "../common/mobileRules";
+import { onNewGame } from "../redux/actions";
+import Rules from "./Rules";
+import Scores from "./Scores";
 
 function NavBar() {
   const dispatch = useDispatch();
   return (
     <>
-      <Navbar bg="dark" variant="dark" className="p-0 pl-3">
+      <Navbar bg="dark" variant="dark" className={getNavBarClassName()}>
         <Navbar.Brand href="#home" className="mr-2">
           <img src="./heart.ico" width="30" height="30" alt=""></img>
         </Navbar.Brand>
-        <Form inline className="mr-auto mt-2 mb-2">
-          <p className={'heart-color font-weight-bold mb-0 header-size'}>Hearts </p>
-          <Button className="ml-3 button-size" variant="outline-success" onClick={() => dispatch(onNewGame())}>
+        <Form inline className="mr-auto">
+          <a href="#newGame" onClick={() => dispatch(onNewGame())} className="text-light nav-link">
             New Game
-          </Button>
+          </a>
         </Form>
         <Form inline>
           <Scores />

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Modal } from "react-bootstrap";
+import { Modal } from "react-bootstrap";
 
 const Rules = () => {
   const [show, setShow] = useState(false);
@@ -7,10 +7,9 @@ const Rules = () => {
 
   return (
     <>
-      <Button variant="secondary" className="mr-2" onClick={() => setShow(true)}>
-        {/* <img src="./question.ico" width="30" height="30" alt=""></img> */}
+      <a href="#rules" onClick={() => setShow(true)} className="text-light nav-link">
         Rules
-      </Button>
+      </a>
       <Modal show={show} onHide={handleClose} backdrop="static" keyboard={false}>
         <Modal.Header className="bg-dark p-2" closeButton>
           <Modal.Title className="text-light w-100 text-center">Rules</Modal.Title>

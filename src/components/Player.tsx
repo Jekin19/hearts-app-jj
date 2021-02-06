@@ -1,11 +1,13 @@
-import React, { useEffect, useState } from 'react';
-import { Badge } from 'react-bootstrap';
-import { useSelector } from 'react-redux';
-import { showPlayerHand } from '../common/mobileRules';
-import { getPlayers, getScores } from '../redux/reducers';
-import { IPlayerInfo } from '../redux/reducers/IPlayerInfo';
-import PlayerHand from './PlayerHand';
-
+import React, { useEffect, useState } from "react";
+import { Badge } from "react-bootstrap";
+import { useSelector } from "react-redux";
+import { showPlayerHand } from "../common/mobileRules";
+import { getPlayers, getScores } from "../redux/reducers";
+import { PLAYER_TYPE } from "../redux/reducers/heartsPlayers";
+import { IPlayerInfo } from "../redux/reducers/IPlayerInfo";
+import PlayerHand from "./PlayerHand";
+import { RenderIf } from "./RenderIf";
+import { Toast } from "./Toast";
 interface IPlayerProp {
   playerDirection: string;
   playerInfo: IPlayerInfo;
@@ -17,16 +19,18 @@ const Player = ({ playerDirection, playerInfo, cardsHidden }: IPlayerProp) => {
   const [playerScore, setPlayerScore] = useState(0);
 
   useEffect(() => {
-    console.log(JSON.stringify(scores));
     const currentScore = scores[scores.length - 1];
     const playerIndex = players.findIndex((player) => player.id === playerInfo.id);
     setPlayerScore(currentScore[playerIndex]);
   }, [scores, players, playerInfo]);
 
   return (
-    <div className={'player player--' + playerDirection}>
+    <div className={"player player--" + playerDirection}>
       <div className="text-light text-center player__name m-1">
-        <Badge variant="danger" className={'player-badge player-badge-' + playerDirection}>
+        <RenderIf validate={playerInfo.playerType === PLAYER_TYPE.Human}>
+          <Toast />
+        </RenderIf>
+        <Badge variant="danger" className={"player-badge player-badge-" + playerDirection}>
           {playerInfo.name}
           <Badge pill variant="light" className="float-right">
             {playerScore}

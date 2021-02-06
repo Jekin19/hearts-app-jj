@@ -1,17 +1,17 @@
-import { ICardInfo, Suits } from '../../common/heartRules';
-import { Hearts } from '../../common/types/hearts';
-import { store } from '../storeData';
-import * as fromHeartsRounds from './heartsRounds';
-import * as fromHeartsTricks from './heartsTricks';
-import * as fromHeartsPlayers from './heartsPlayers';
-import * as fromHeartsUI from './heartsUI';
-import { GAME_PHASES } from './heartPhases';
+import { ICardInfo, Suits } from "../../common/heartRules";
+import { Hearts } from "../../common/types/hearts";
+import { store } from "../storeData";
+import * as fromHeartsRounds from "./heartsRounds";
+import * as fromHeartsTricks from "./heartsTricks";
+import * as fromHeartsPlayers from "./heartsPlayers";
+import * as fromHeartsUI from "./heartsUI";
+import { GAME_PHASES } from "./heartPhases";
 
 export const initialState: Hearts.State = {
   players: [],
   phase: store.phase,
   rounds: [{ tricks: [[]] }],
-  ui: { POV: null }
+  ui: { POV: null },
 };
 
 export const getPassDirection = (state: Hearts.State) => {
@@ -34,6 +34,25 @@ export const isReadyToPass = (state: Hearts.State) => {
     }
   }
   return true;
+};
+
+export const getToast = (state: Hearts.State) => {
+  switch (getCurrentPhase(state)) {
+    case GAME_PHASES.GAME_START:
+      return "Welcome to Hearts";
+    case GAME_PHASES.PASSING:
+      const players = getPlayers(state);
+      const passDirection = getPassDirection(state);
+      const POVIndex = getPOVPlayerIndex(state);
+      return "Pass 3 cards to " + players[(POVIndex + passDirection) % players.length].name;
+    case GAME_PHASES.PLAYING:
+      const currentPlayer = getCurrentPlayer(state);
+      return "Waiting for " + currentPlayer?.name;
+    case GAME_PHASES.GAME_END:
+      return "GAME OVER!";
+    default:
+      return " ";
+  }
 };
 
 // Player selectors

@@ -111,3 +111,14 @@
   transform: rotate(270deg);
   margin-right: -25px;
 }
+
+.blink_me {
+  animation: blinker 3s step-start infinite;
+  animation-delay: 2s;
+}
+
+@keyframes blinker {
+  20% {
+    opacity: 0;
+  }
+}
