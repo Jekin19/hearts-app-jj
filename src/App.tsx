@@ -30,10 +30,10 @@ function App() {
       <div ref={navBarRef}>
         <NavBar />
       </div>
-      <RenderIf validate={isGameOver !== GAME_PHASES.GAME_END}>
+      <RenderIf validate={isGameOver === GAME_PHASES.GAME_END}>
         <GameOver />
       </RenderIf>
-      <RenderIf validate={isGameOver === GAME_PHASES.GAME_END}>
+      <RenderIf validate={isGameOver !== GAME_PHASES.GAME_END}>
         <HeartsGame navBarHeight={navBarHeight} />
       </RenderIf>
     </>
