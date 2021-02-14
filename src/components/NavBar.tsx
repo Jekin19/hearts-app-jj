@@ -16,7 +16,7 @@ function NavBar() {
   const HeartsNavBar = ({ children }: HeartsNavBarProps) => {
     if (!isMobile) {
       return (
-        <Navbar bg='dark' variant='dark' className='p-2 pl-3"'>
+        <Navbar bg='dark' variant='dark' className='p-2 pl-3'>
           {children}
         </Navbar>
       );
@@ -24,13 +24,13 @@ function NavBar() {
 
     if (screenOrientation?.includes('portrait')) {
       return (
-        <Navbar bg='dark' variant='dark' className='pt-4 p-0 pl-3"'>
+        <Navbar bg='dark' variant='dark' className='pt-4 pr-3 pb-0 pl-3'>
           {children}
         </Navbar>
       );
     }
     return (
-      <Navbar bg='dark' variant='dark' className='p-0 pl-3"'>
+      <Navbar bg='dark' variant='dark' className='pr-3 pb-0 pl-3 pt-0'>
         {children}
       </Navbar>
     );
