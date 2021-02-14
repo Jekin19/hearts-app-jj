@@ -1,8 +1,10 @@
 {
-  "name": "hearts-app-jj",
+  "name": "hearts.app.jj",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@capacitor/core": "^2.4.6",
+    "@capacitor/ios": "^2.4.6",
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.3",
     "@testing-library/user-event": "^12.6.0",
@@ -53,6 +55,7 @@
     ]
   },
   "devDependencies": {
+    "@capacitor/cli": "2.4.6",
     "@types/redux-logger": "^3.0.8",
     "@types/uuid": "^8.3.0",
     "redux-devtools-extension": "^2.13.8"

@@ -9,7 +9,7 @@ export const defaultNavBarHeight = (height: number | undefined): number => {
 };
 
 export const getNavBarClassName = () => {
-  return isMobile ? " p-0 pl-3" : " p-2 pl-3";
+  return isMobile ? " pt-4 p-0 pl-3" : " pt-4 p-2 pl-3";
 };
 
 export const getScoreHeight = () => {

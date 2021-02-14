@@ -1,0 +1,7 @@
+{
+  "name": "hearts.app.jj",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}

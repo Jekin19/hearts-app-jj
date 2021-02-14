@@ -1,0 +1,8 @@
+{
+  "appId": "io.ionic.hearts.app.jj",
+  "appName": "Hearts",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "build",
+  "cordova": {}
+}
