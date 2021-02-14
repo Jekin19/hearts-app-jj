@@ -6,8 +6,6 @@ const getOrientation = () => {
   }
   const height = document.getElementById('root')?.clientHeight ?? 0;
   const width = document.getElementById('root')?.clientWidth ?? 0;
-  console.log('height: ' + height);
-  console.log('width: ' + width);
   return height > width ? 'portrait' : 'landscape';
 };
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Form, Navbar } from 'react-bootstrap';
-import { isMobile } from 'react-device-detect';
+import { isMobile, isBrowser, isMobileSafari } from 'react-device-detect';
 import { useDispatch } from 'react-redux';
 import { onNewGame } from '../redux/actions';
 import Rules from './Rules';
@@ -22,7 +22,8 @@ function NavBar() {
       );
     }
 
-    if (screenOrientation?.includes('portrait')) {
+    // Portait mode but not in browser
+    if (!isBrowser && !isMobileSafari && screenOrientation?.includes('portrait')) {
       return (
         <Navbar bg='dark' variant='dark' className='pt-4 pr-3 pb-0 pl-3'>
           {children}
